@@ -1,0 +1,11 @@
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\EnterpriseChatBot.Desktop.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\EnterpriseChatBot.Desktop.Library.AssemblyInfoInputs.cache
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\EnterpriseChatBot.Desktop.Library.AssemblyInfo.cs
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\EnterpriseChatBot.Desktop.Library.csproj.CoreCompileInputs.cache
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\bin\Debug\net8.0\EnterpriseChatBot.Desktop.Library.deps.json
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\bin\Debug\net8.0\EnterpriseChatBot.Desktop.Library.dll
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\bin\Debug\net8.0\EnterpriseChatBot.Desktop.Library.pdb
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\EnterpriseChatBot.Desktop.Library.dll
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\refint\EnterpriseChatBot.Desktop.Library.dll
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\EnterpriseChatBot.Desktop.Library.pdb
+C:\Users\senti\source\repos\EnterpriseChatBot.Desktop.Library\EnterpriseChatBot.Desktop.Library\obj\Debug\net8.0\ref\EnterpriseChatBot.Desktop.Library.dll
