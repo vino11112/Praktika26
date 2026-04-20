@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="EnterpriseChatBot.Desktop/EnterpriseChatBot.Desktop.csproj" />
+  <Project Path="TestProject2/TestProject2.csproj" Id="2248bdc0-b7c3-4730-8535-824da6df6a78" />
 </Solution>
