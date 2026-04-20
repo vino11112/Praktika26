@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EnterpriseChatBot.Mobile.Pages.ChatPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:EnterpriseChatBot.Mobile.Models"
+    Title="Чат">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Убрать файл" Clicked="OnClearDocumentClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto" Padding="12" RowSpacing="10">
+
+        <Border
+            Grid.Row="0"
+            BackgroundColor="White"
+            Stroke="{StaticResource BorderColor}"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 20"
+            Padding="14">
+            <VerticalStackLayout Spacing="2">
+                <Label
+                    x:Name="ChatTitleLabel"
+                    Text="Чат"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource TextColor}" />
+                <Label
+                    x:Name="SelectedFileLabel"
+                    Text="Файл не выбран"
+                    FontSize="12"
+                    TextColor="{StaticResource HintColor}" />
+            </VerticalStackLayout>
+        </Border>
+
+        <CollectionView
+            x:Name="MessagesCollection"
+            Grid.Row="1"
+            SelectionMode="None"
+            ItemsLayout="VerticalList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:ChatMessageItem">
+                    <Grid Padding="0,4">
+                        <Border
+                            HorizontalOptions="{Binding HorizontalAlignment}"
+                            MaximumWidthRequest="310"
+                            Stroke="{StaticResource BorderColor}"
+                            StrokeThickness="1"
+                            BackgroundColor="{Binding BubbleColor}"
+                            StrokeShape="RoundRectangle 20"
+                            Padding="14">
+                            <VerticalStackLayout Spacing="6">
+                                <Label
+                                    Text="{Binding Text}"
+                                    TextColor="{Binding TextColor}"
+                                    LineBreakMode="WordWrap"
+                                    FontSize="15" />
+
+                                <Label
+                                    Text="{Binding TimeText}"
+                                    FontSize="11"
+                                    Opacity="0.75"
+                                    HorizontalOptions="End"
+                                    TextColor="{Binding TextColor}" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Border
+            Grid.Row="2"
+            BackgroundColor="#EEF2FF"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 14"
+            Padding="10,8"
+            IsVisible="{Binding Source={x:Reference LoadingIndicator}, Path=IsRunning}">
+            <HorizontalStackLayout Spacing="8">
+                <ActivityIndicator
+                    x:Name="LoadingIndicator"
+                    IsRunning="False"
+                    IsVisible="False"
+                    Color="{StaticResource PrimaryColor}" />
+                <Label
+                    Text="Бот думает..."
+                    VerticalOptions="Center"
+                    TextColor="{StaticResource PrimaryColor}" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <Border
+            Grid.Row="3"
+            BackgroundColor="White"
+            Stroke="{StaticResource BorderColor}"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 22"
+            Padding="10">
+            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+
+                <Button
+                    Grid.Column="0"
+                    Text="+"
+                    WidthRequest="48"
+                    HeightRequest="48"
+                    CornerRadius="14"
+                    BackgroundColor="{StaticResource SecondaryColor}"
+                    TextColor="{StaticResource PrimaryColor}"
+                    Clicked="OnPickFileClicked" />
+
+                <Border
+                    Grid.Column="1"
+                    BackgroundColor="{StaticResource SecondaryColor}"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 16"
+                    Padding="12,4">
+                    <Entry
+                        x:Name="MessageEntry"
+                        Placeholder="Введите сообщение..."
+                        BackgroundColor="Transparent" />
+                </Border>
+
+                <Button
+                    Grid.Column="2"
+                    Text="➤"
+                    WidthRequest="48"
+                    HeightRequest="48"
+                    CornerRadius="14"
+                    BackgroundColor="{StaticResource PrimaryColor}"
+                    TextColor="White"
+                    Clicked="OnSendClicked" />
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>
